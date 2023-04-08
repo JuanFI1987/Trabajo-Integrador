@@ -50,5 +50,44 @@ public class lecturaArchivosCSV {
         }
     }
     
+    public static ArrayList<Pronostico> obtenerPronostico() {
+        final String archivoPronosticos = "pronostico.csv";
+        final String separadorComa = ";";
+        //final String rutaDeAccesoResultados = "C:\\Users\\feder\\OneDrive\\Documents\\NetBeansProjects\\TrabajoIntegrado\\resultados.csv";
+        //Path resultados = Paths.get(rutaDeAccesoResultados);
+
+        ArrayList<Pronostico> pronosticos = new ArrayList<>();
+        FileReader fileReader = null;
+        BufferedReader bufferedReader = null;
+
+        try {
+            fileReader = new FileReader(archivoPronosticos);
+            bufferedReader = new BufferedReader(fileReader);
+            String linea;
+            while ((linea = bufferedReader.readLine()) != null) {
+                //System.out.println(linea);
+                String[] pronosticoComoArreglo = linea.split(separadorComa);
+                //for (String prueba : partidoComoArreglo){
+                //    System.out.println(prueba);
+                //}
+                pronosticos.add(new Pronostico(pronosticoComoArreglo[0], Pronostico(pronosticoComoArreglo[1]), Pronostico(pronosticoComoArreglo[3], Pronostico(pronosticoComoArreglo[4],Pronostico(pronosticoComoArreglo[5]);
+                //System.out.println(pronosticos);
+            }
+        } catch (IOException e) {
+            System.out.println("Excepción leyendo archivo: " + e.getMessage());
+        } finally {
+            try {
+                if (fileReader != null) {
+                    fileReader.close();
+                }
+                if (bufferedReader != null) {
+                    bufferedReader.close();
+                }
+            } catch (IOException e) {
+                System.out.println("Excepción cerrando: " + e.getMessage());
+            }
+            return pronosticos;
+        }
+    }
     
 }

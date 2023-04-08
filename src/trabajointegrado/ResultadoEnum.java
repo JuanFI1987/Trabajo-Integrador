@@ -6,7 +6,7 @@ import static trabajointegrado.lecturaArchivosCSV.obtener;
 
 
 public class ResultadoEnum {
-     String resultado1;
+     private String resultado1;
      ArrayList<Partido> partidos = obtener();
      Partido partido1 = partidos.get(0);
         if (partido1.getGolesEquipo1()>partido1.getGolesEquipo2()){
