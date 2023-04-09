@@ -31,7 +31,7 @@ public class lecturaArchivosCSV {
                     //    System.out.println(prueba);
                     //}
                 partidos.add(new Partido(partidoComoArreglo[0], Integer.valueOf(partidoComoArreglo[1]), Integer.valueOf(partidoComoArreglo[2]), partidoComoArreglo[3]));
-                System.out.println(partidos);
+                //System.out.println(partidos);
             }
         } catch (IOException e) {
             System.out.println("Excepción leyendo archivo: " + e.getMessage());
@@ -51,13 +51,13 @@ public class lecturaArchivosCSV {
         return partidos;
     }
     
-    public static ArrayList<Pronostico> obtenerPronostico() {
+    public static ArrayList <Pronostico> obtenerPronostico() {
         final String archivoPronosticos = "pronostico.csv";
         final String separadorComa = ";";
         //final String rutaDeAccesoResultados = "C:\\Users\\feder\\OneDrive\\Documents\\NetBeansProjects\\TrabajoIntegrado\\resultados.csv";
         //Path resultados = Paths.get(rutaDeAccesoResultados);
 
-        ArrayList<Pronostico> pronosticos = new ArrayList<>();
+        ArrayList <Pronostico> pronosticos = new ArrayList<>();
         FileReader fileReader = null;
         BufferedReader bufferedReader = null;
 
@@ -69,7 +69,7 @@ public class lecturaArchivosCSV {
                 //System.out.println(linea);
                 String[] pronosticoComoArreglo = linea.split(separadorComa);
                 //for (String prueba : partidoComoArreglo){
-                //    System.out.println(prueba);
+                //   System.out.println(prueba);
                 //}
                 pronosticos.add(new Pronostico(pronosticoComoArreglo[1].charAt(0), pronosticoComoArreglo[2].charAt(0), pronosticoComoArreglo[3].charAt(0) ));
                 //System.out.println(pronosticos);

@@ -13,7 +13,7 @@ public class TrabajoIntegrado {
     public static void main(String[] args) {
         
                
-        //System.out.println("Tu puntaje total es de: " + Pronostico.calcularPuntajePronostico());
+        System.out.println("Tu puntaje total es de: " + Pronostico.calcularPuntajePronostico());
         
         
         
@@ -24,7 +24,7 @@ public class TrabajoIntegrado {
         
         
         
-        
+        /*
         ArrayList<Partido> partidos = obtener();
         for(int x=0; x < partidos.size(); x++){
             Partido partido = partidos.get(x);
@@ -36,7 +36,7 @@ public class TrabajoIntegrado {
             Pronostico pronostico = pronosticos.get(x);
             System.out.println(pronostico.getGanador1() + " - " + pronostico.getGanador2() + " - " + pronostico.getEmpate());
         }
-        
+        */
     }
     
 }
