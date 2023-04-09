@@ -31,7 +31,7 @@ public class lecturaArchivosCSV {
                     //    System.out.println(prueba);
                     //}
                 partidos.add(new Partido(partidoComoArreglo[0], Integer.valueOf(partidoComoArreglo[1]), Integer.valueOf(partidoComoArreglo[2]), partidoComoArreglo[3]));
-                //System.out.println(partidos);
+                System.out.println(partidos);
             }
         } catch (IOException e) {
             System.out.println("Excepción leyendo archivo: " + e.getMessage());
@@ -46,8 +46,9 @@ public class lecturaArchivosCSV {
             } catch (IOException e){
                 System.out.println("Excepción cerrando: " + e.getMessage());
             }
-            return partidos;
+            
         }
+        return partidos;
     }
     
     public static ArrayList<Pronostico> obtenerPronostico() {
@@ -70,7 +71,7 @@ public class lecturaArchivosCSV {
                 //for (String prueba : partidoComoArreglo){
                 //    System.out.println(prueba);
                 //}
-                pronosticos.add(new Pronostico(pronosticoComoArreglo[0], Pronostico(pronosticoComoArreglo[1]), Pronostico(pronosticoComoArreglo[3], Pronostico(pronosticoComoArreglo[4],Pronostico(pronosticoComoArreglo[5]);
+                pronosticos.add(new Pronostico(pronosticoComoArreglo[1].charAt(0), pronosticoComoArreglo[2].charAt(0), pronosticoComoArreglo[3].charAt(0) ));
                 //System.out.println(pronosticos);
             }
         } catch (IOException e) {
@@ -86,8 +87,9 @@ public class lecturaArchivosCSV {
             } catch (IOException e) {
                 System.out.println("Excepción cerrando: " + e.getMessage());
             }
-            return pronosticos;
+            
         }
+        return pronosticos;
     }
     
 }
